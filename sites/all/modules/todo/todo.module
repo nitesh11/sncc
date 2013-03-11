@@ -1,0 +1,184 @@
+<?php
+
+function todo_menu()
+{
+  $items['todo']=array(
+  'title'=> 'to-do tasks',
+  'page callback' => drupal_get_form,
+  'page arguments' => array('todo_form_function'),
+  'access arguments' => array('access content'),
+  'type' => MENU_NORMAL_ITEM,
+ );
+
+$items['add_todo']=array(
+  'title'=> 'to-do tasks',
+  'page callback' => drupal_get_form,
+  'page arguments' => array('work_form_function'),
+  'access arguments' => array('access content'),
+  'type' => MENU_NORMAL_ITEM,
+   );
+  return $items;
+}
+
+// implmentng hook block
+function todo_block_info() {
+  $blocks['todo_items'] = array(
+    'info' => t('Todo Items'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
+
+  $blocks['todo_work'] = array(
+      'info' => t('Work To Do'),
+      'cache' => DRUPAL_CACHE_PER_ROLE,
+    );
+  return $blocks;
+}
+
+
+function todo_block_view($delta = '') {
+  switch($delta) {
+    case 'todo_items':
+      $block['content'] = drupal_get_form('todo_form_function');
+      
+    break;
+    case 'todo_work' :
+    $block['content'] = drupal_get_form('work_form_function');
+      break; 
+  }
+  return $block;
+}
+
+function todo_contents(){
+  global $user;
+  $uid = $user->uid;
+   $query = db_select('todo', 'td')
+    ->fields('td', array('nid', 'title'))
+    ->condition('status', 'not done')
+    ->condition('user_id', $uid) //Published.
+    ->execute()->fetchAll();
+    return $query; 
+}
+
+function todo_done_contents(){
+  global $user;
+  $uid = $user->uid;
+   $query = db_select('todo', 'td')
+    ->fields('td', array('nid', 'title'))
+    ->condition('status', 'done')
+    ->condition('user_id', $uid) //Published.
+    ->execute()->fetchAll();
+    return $query; 
+}
+function todo_form_function()
+{
+
+  $variables['todos']= todo_contents();  
+  foreach($variables['todos'] as $todo_title) 
+  {
+    $todos[$todo_title->nid] = $todo_title->title;
+  } 
+
+
+  $form['todo_content'] = array(
+    '#type' => 'checkboxes',
+    '#options' => $todos,
+    '#ajax' => array(
+      'callback' => 'todo_form_function_submit',
+      'wrapper' => 'replace_div',
+      ),
+     '#prefix' => '<div id="replace_div"><span>Undone task</span>',
+ //    '#suffix' => '</div>',
+  ); 
+
+  $variables['todos_done']= todo_done_contents();  
+  foreach($variables['todos_done'] as $todo_done_title) 
+  {
+    $todos_done[$todo_done_title->nid] = $todo_done_title->title;
+  } 
+
+
+
+  $form['todo_done_content'] = array(
+    '#type' => 'checkboxes',
+    '#options' => $todos_done,
+    '#ajax' => array(
+      'callback' => 'todo_done_form_function',
+      'wrapper' => 'replace_div',
+      ),
+     '#prefix'=> '<span>Done Task </span>',
+     '#suffix' => '</div>',
+  );
+  return $form;
+}
+
+function todo_form_function_delet($form,$form_state)
+{
+
+} 
+
+function work_form_function()
+{
+
+  $form['todo_work'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Enter work to do today'),
+    '#size' =>25,
+    '#default_value' => 'Enter Task'
+  );
+
+  $form['submit'] = array(
+  '#type' => 'submit',
+  '#name' => 'Create work',
+  '#value' => 'submit',
+);
+  return $form;
+}
+
+function work_form_function_submit($form,$form_state)
+{
+  global $user;
+  $uid = $user->uid;
+  $nid = db_insert('todo') 
+  ->fields(array(
+  'title' => $form_state['values']['todo_work'],
+  'user_id' => $uid,
+  'status' => 'not done',
+  ))->execute();
+}
+
+function todo_form_function_submit($form,$form_state)
+{
+    global $user;
+    foreach ($form_state['values']['todo_content'] as $list) 
+    {
+      if($list)
+      {
+       $updation=db_update('todo')
+      ->fields(array(
+      'status' => 'done',
+        ))
+      ->condition('nid', $list )
+      ->execute();      
+      }
+    }
+  
+  return drupal_render(drupal_get_form('todo_form_function'));
+}
+
+function todo_done_form_function($form,$form_state){
+    global $user;
+    foreach ($form_state['values']['todo_done_content'] as $list) 
+    {
+      if($list)
+      {
+       $updation=db_update('todo')
+      ->fields(array(
+      'status' => 'not done',
+        ))
+      ->condition('nid', $list )
+      ->execute();      
+      }
+    }
+  
+  return drupal_render(drupal_get_form('todo_form_function'));
+}

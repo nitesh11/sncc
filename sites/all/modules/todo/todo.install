@@ -1,0 +1,34 @@
+<?php
+
+function todo_schema(){
+
+$schema['todo'] = array(
+        'description' => 'TODO: Description',
+        
+        'fields' => array(
+        'nid' => array(
+        'description' => 'TODO: primary key',
+        'type' => 'int',
+        'not null' => TRUE,
+    ),
+
+        'title' => array(
+        'description' => 'TODO: titile',
+        'type' => 'text',
+        'not null' => FALSE,
+    ),
+
+        'status' => array(
+        'description' => 'TODO work: Description',
+        'type' => 'text',
+        'not null' => TRUE,
+    ),
+    ),
+    'primary key' => array('nid'),
+  );
+    return $schema;
+}
+
+function todo_update_7002() {
+  db_add_field('todo', 'user_id', array('type' => 'int', 'not null' => TRUE, 'description' => 'table for user id'));
+}

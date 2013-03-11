@@ -1,4 +1,0 @@
-sncc
-====
-
-Sncc contrib modules

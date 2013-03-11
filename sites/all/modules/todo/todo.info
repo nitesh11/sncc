@@ -1,0 +1,6 @@
+name = todo
+description = Todo module.
+core = 7.x
+version = "7.x-1.x-dev"
+dependencies[] = block
+dependencies[] = views

@@ -1,0 +1,123 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+.block-menu-menu-sncc-footer ul.menu li
+{
+	list-style: none !important;
+	padding-left: 10px;
+	float: left; 
+	border-left: 1px solid #0000aa;
+	padding-right:10px;
+	color:#0000aa;
+	line-height:10px;
+	color: blue;
+	padding-bottom: 2px;
+
+}
+
+li.leaf : first-child
+{
+	font-weight: bold;
+}
+li.leaf:nth-child(2) a {
+font-weight: bold;
+}
+
+.block-menu-menu-sncc-footer ul.menu li.first {
+	border-left:0px;
+	font-weight: bold;
+}
+.block-menu-menu-sncc-footer ul.menu li a{
+	color: #0000aa;
+}
+#snippet-footer_copyright-13{
+	color:blue;
+}
+#snippet-sidebar_right-26{
+	border-left: 1px solid black;
+	padding-left: 30px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	color: blue;
+	
+	font-weight: bold;
+}
+.header {
+	background-color: #A1B980;
+	color: #ffffff;
+	padding-left: 13px;
+	line-height: 40px;
+	padding-top: 0px;
+	font-size: 13px;
+	width: 367px;
+}
+.site-slogan {
+color: #7CA7D2;
+font-size: 28px;
+padding-top: 60px;
+font-family: serif;
+}
+#zone-branding-wrapper {
+height: 110px;
+}
+
+div.field-items div.field-item,div.even 
+{ 
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #7CA7D2;
+	color: #000000;
+	margin-top: 20px;
+}
+
+#snippet-sncc_banner_image-75
+{
+
+	width: 757px;
+
+}
+h2.pane-title
+{
+	color:#0000aa;
+}
+#region-menu
+{
+	background: #0000aa;
+}
+#zone-menu
+{
+	background: #0000aa;	
+}
+
+.views-field.views-field-title 
+{
+	margin-top: -80px;
+	margin-left: 129px;
+	float: left;
+	
+}
+.views-field.views-field-body
+{
+	margin-top: -49px;
+	margin-left: 129px;
+	float: left;
+	
+} 
+.views-field-field-view-image {    
+ margin: 0px; 
+ }
+
+#zone-menu-wrapper {
+	background-color: #0000aa; 
+} 
+
+li.menu-path-home
+{
+	background-color: #0000aa; 	
+}
+img.media-image
+{
+	padding-bottom: 10px;
+}
