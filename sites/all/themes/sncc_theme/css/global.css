@@ -30,17 +30,13 @@ font-weight: bold;
 .block-menu-menu-sncc-footer ul.menu li a{
 	color: #0000aa;
 }
-#snippet-footer_copyright-13{
-	color:blue;
-}
-#snippet-sidebar_right-26{
-	border-left: 1px solid black;
+
+.footer
+{
+	border-top: 1px solid black;
 	padding-left: 30px;
 	padding-top: 15px;
 	padding-bottom: 5px;
-	color: blue;
-	
-	font-weight: bold;
 }
 .header {
 	
@@ -122,7 +118,7 @@ h2.pane-title
 {
   color: #fff;
   font-weight: bold;
-    text-decoration: none;
+  text-decoration: none;
   font-size:15px;
   text-align: center;
   padding-right:40px;
@@ -201,4 +197,8 @@ div.pane-content ul.menu li
 a img.media-image 
 {
 	padding-bottom: 10px;
+}
+.footer_copyright
+{
+	color:blue;
 }
