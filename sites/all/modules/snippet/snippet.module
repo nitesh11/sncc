@@ -86,7 +86,7 @@ function snippet_load($snippet_name, $rid = NULL) {
  */
 function snippet_preprocess_panels_pane(&$vars) {
   $pane = $vars['pane'];
-  if (user_access('manage snippet')) {
+  if (user_access('manage snippet') && ($pane->type == "snippet")) {
     // get the destination
     $destination = drupal_get_destination();
 

@@ -1,11 +1,19 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+body
+{
+  background-color:#E5ECDD;
+  background-image: url('bg.png');
+}
 
+header{
+  background-color:#fff;
+}
 .block-menu-menu-sncc-footer ul.menu li
 {
 	list-style: none !important;
 	padding-left: 10px;
-	float: left; 
+	float: left;
 	border-left: 1px solid #0000aa;
 	padding-right:10px;
 	color:#0000aa;
@@ -15,11 +23,11 @@
 
 }
 
-li.leaf : first-child
+ul.menu li.leaf : first-child
 {
 	font-weight: bold;
 }
-li.leaf:nth-child(2) a {
+ul.menu li.leaf:nth-child(2) a {
 font-weight: bold;
 }
 
@@ -37,9 +45,11 @@ font-weight: bold;
 	padding-left: 30px;
 	padding-top: 15px;
 	padding-bottom: 5px;
+  margin-top: -5px;
+  background-color: #fff;
 }
 .header {
-	
+
 	background-color: #A1B980;
 	color: #ffffff;
 	padding-left: 13px;
@@ -52,19 +62,12 @@ font-weight: bold;
 color: #7CA7D2;
 font-size: 28px;
 padding-top: 60px;
-font-family: serif;
+font-family: 'AlternateGothic2BTRegular';
 }
 #zone-branding-wrapper {
 height: 110px;
 }
 
-
-#snippet-sncc_banner_image-75
-{
-
-	width: 757px;
-
-}
 h2.pane-title
 {
 	color:#0000aa;
@@ -77,23 +80,7 @@ h2.pane-title
   width: 100%;
 }
 
-#mini-panel-top_sncc .panels-flexible-column-last 
-{
-	padding-left: 2px;
-	padding-right: 10px;
-	padding-top: 14px;
-	padding-bottom: 0px;
-	
-	color: #000000;
-	margin-top: -520px;
-	float: right;
-}
-#zone-menu .nice-menu 
-{
-  width: 100%;
-}
-
-#zone-menu,#region-menu 
+#zone-menu,#region-menu
 {
   width: 100%;
   padding-left: 2px;
@@ -105,26 +92,25 @@ h2.pane-title
 {
   float: left;
   text-align: center;
-  padding-left:50px;
+  padding-left:15px;
 
   background:#004A8D;
 }
 
 #zone-menu .nice-menu li a.active{
   color: #7CA7D2;
-
 }
 #zone-menu .nice-menu li a
 {
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-  font-size:15px;
+  font-size:13px;
   text-align: center;
-  padding-right:40px;
+  padding-right:15px;
 }
 
-ul.nice-menu ul 
+ul.nice-menu ul
 {
   top: 2em;
   margin: 1px;
@@ -133,72 +119,197 @@ ul.nice-menu ul
   height:5px;
   width: 100%;
 }
-#zone-menu ul.nice-menu ul li 
+#zone-menu ul.nice-menu ul li
 {
   width: 100%;
   padding-left: 10px;
-	  border-top: 2px solid #ccc;
+	border-top: 2px solid #ccc;
 }
-#nice-menu-1 
+#nice-menu-1
 {
 	padding-left: 91px;
 }
 
 
-.panel-pane.pane-node-title.title_node 
+.panel-pane.pane-node-title.title_node
 {
 	color: blue;
 	font-weight: bold;
 	font-size: 20px;
 }
 
-.views-field.views-field-body 
+.views-field.views-field-body
 {
 	float: left;
-	margin-top: -55px;
+	margin-top: -33px;
 	text-align: left;
 	padding-left: 138px;
 }
-.views-field.views-field-title 
+.views-field.views-field-title
 {
 	float: left;
-	margin-top: -76px;
+	margin-top: -71px;
 	text-align: left;
 	padding-left: 138px;
-	color:#7CA7D2;
+ 	color:#7CA7D2;
 }
-.field.field-name-body.field-type-text-with-summary.field-label-hidden 
-{
-	margin-top: 57px;
-	padding-left: 20px;
-	padding-top: 20px;
-	padding-bottom: -44px;
-}
-div.pane-content ul.menu li 
+div.pane-content ul.menu li
 {
 	list-style: none !important;
 	font-size: 15px;
 	font-weight:bold;
 }
 
-.row-1.row-first 
+.row-1.row-first
 {
 	border: 1px dashed;
 
 }
-.text 
-{
-	background: #7CA7D2;
-	padding-bottom: 5px;
-	margin-bottom: 2px;
-	margin-top: -4px;
-	margin-left: -1px;
-}
-a img.media-image 
+a img.media-image
 {
 	padding-bottom: 10px;
 }
 .footer_copyright
 {
 	color:blue;
+  font-size:13px;
+  margin-top: -6px;
+  padding-top: 17px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  background-color: #fff;
+}
+/*.views-view-grid.cols-2
+{
+	border-right: 1px solid ;
+}*/
+
+.banner-front-image p {
+	margin: 0px;
+}
+.text
+{
+	background: #7CA7D2;
+	padding: 5px;
+}
+#mini-panel-top_sncc .grid-12 {
+  width: 570px;
+  margin-right: 0px;
+}
+#mini-panel-top_sncc .grid-4 {
+  width: 370px;
+  margin: 0px;
+}
+#mini-panel-top_sncc {
+  height: 370px;
+  overflow: hidden;
+}
+#zone-menu .nice-menu
+{
+  width: 74%;
+}
+#nice-menu-1
+{
+  padding-left: 166px;
+}
+.snippet
+{
+  width:210px;
+  float:left;
+   margin:0px;
+}
+.front-view
+{
+  width:700px;
+  margin:0px;
+  padding:0px;
+}
+.views-row.views-row-1.views-row-odd.views-row-first
+{
+  text-align: center;
+}
+
+.node-title
+{
+  color:#004A8D;
+  font-size:27px;
+  font-weight:bold;
+}
+
+.node-body
+{
+  padding-bottom: 70px;
+}
+div.views-row.views-row-1.views-row-odd.views-row-first img a
+{
+  margin-top:-21px;
+}
+
+ @font-face {
+  font-family: 'AlternateGothic2BTRegular';
+  src: url('../../../../sites/all/themes/sncc_theme/fonts/AKZIDENZGROTESKBE-LIGHTEX.OTF')format('OTF');
+  font-weight: normal;
+  font-style: normal;
+}
+.panel-pane.pane-views.pane-front-page-view-block.front-view.contextual-links-region
+{
+  background-color: #fff;
+}
+#mini-panel-mid_sncc1 div.container-12 .grid-12
+{
+  width: 610px;
+}
+
+p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
+  margin-bottom: 6px;
+}
+.panels-flexible-region.panels-flexible-region-4-center.panels-flexible-region-first.panels-flexible-region-last {
+  background-color: #fff;
+  width: 940px;
+  float: left;
+  height: 327px;
+  margin-left: 10px;
+  margin-top: -5px;
+}
+#region-footer-second-2
+{
+  background-color: #fff;
+  margin-top: -6px;
+  padding-top: 17px;
+  background-color: #fff;
+  margin-left: -13px;
+  padding-left: 263px;
+  padding-bottom: 19px;
+}
+.panels-flexible-column.panels-flexible-column-40-1.panels-flexible-column-first.panels-flexible-column-last
+{
+  background-color: #fff;
+  margin-left: 10px;
+  padding-bottom: 15px;
+}
+.panels-flexible-row.panels-flexible-row-39-2.panels-flexible-row-last.clearfix
+{
+  background-color: #fff;
+  margin-left: 10 px;
+  margin-right: 3px;
+  width: 950px;
+}
+
+.panels-flexible-row.panels-flexible-row-32-2.panels-flexible-row-last.clearfix
+{
+  background-color: #fff;
+  margin-left: 10px;
+  margin-right: 3px;
+  width: 950px;
+}
+#mini-panel-mid_sncc1 .grid-12 {
+  width: 700px;
+}
+#mini-panel-mid_sncc1 .grid-4 {
+  margin-top: 50px;
+  width: 200px;
+}
+.field-item.even {
+margin-left: 0px;
+margin-bottom: -7px;
 }
