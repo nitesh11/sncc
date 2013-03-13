@@ -56,7 +56,7 @@ font-weight: bold;
 	line-height: 40px;
 	padding-top: 0px;
 	font-size: 13px;
-	width: 367px;
+	width: 375px;
 }
 .site-slogan {
 color: #7CA7D2;
@@ -68,9 +68,10 @@ font-family: 'AlternateGothic2BTRegular';
 height: 110px;
 }
 
-h2.pane-title
-{
-	color:#0000aa;
+
+h2.pane-title {
+color: #004A8D;
+border-bottom: 1px dashed grey;
 }
 #region-menu
 {
@@ -96,7 +97,13 @@ h2.pane-title
 
   background:#004A8D;
 }
+ul.menu li a{
+   text-decoration:none;
+}
 
+ul.menu li a.active {
+  color: #004A8D;
+}
 #zone-menu .nice-menu li a.active{
   color: #7CA7D2;
 }
@@ -114,8 +121,8 @@ ul.nice-menu ul
 {
   top: 2em;
   margin: 1px;
-  border-top: 1px transparent;
-  border-left:10px;
+  /*border-top: 1px transparent;*/
+  /*border-left:10px;*/
   height:5px;
   width: 100%;
 }
@@ -123,7 +130,7 @@ ul.nice-menu ul
 {
   width: 100%;
   padding-left: 10px;
-	border-top: 2px solid #ccc;
+	/*border-top: 2px solid #ccc;*/
 }
 #nice-menu-1
 {
@@ -342,6 +349,7 @@ padding-bottom: 50px;
 .panel-flexible.panels-flexible-35.clearfix
 {
   background-color: #fff;
+  width:950px;
 }
 #snippet-contact_us-85
 {
@@ -364,3 +372,55 @@ padding-bottom: 50px;
   color: #7CA7D2;
 }
 
+.panel-pane.pane-block.pane-menu-menu-patient-resources {
+  padding-left: 40px;
+  padding-top: 18px;
+  text-transform: uppercase;
+}
+
+.panel-pane.pane-block.pane-menu-menu-services.node-sidebar {
+  padding-left: 40px;
+  padding-top: 18px;
+  text-transform: uppercase;
+}
+.inside.panels-flexible-region-inside.panels-flexible-region-32-r1__-inside.panels-flexible-region-inside-first
+{
+  padding-left: 40px;
+  padding-top: 18px;
+  text-transform: uppercase;
+}
+.panels-flexible-region.panels-flexible-region-32-r1.panels-flexible-region-last
+{
+  padding-top: 18px;
+}
+.panels-flexible-region.panels-flexible-region-39-r1.panels-flexible-region-last {
+  padding-top: 18px;
+}
+.panels-flexible-region.panels-flexible-region-43-r1.panels-flexible-region-last {
+  padding-top: 18px;
+}
+
+div.pane-menu-menu-services div.pane-content ul.menu
+{
+  border-bottom: 1px dashed grey;
+}
+
+div.pane-menu-menu-services ul.menu li.leaf
+{
+
+padding-left: 10px;
+}
+
+div.pane-menu-menu-services ul.menu li
+{
+  padding-left:10px;
+}
+
+div.pane-menu-menu-services ul.menu li.first li
+{
+  text-transform:capitalize;
+}
+.pane-menu-menu-your-team-sidebar-menu ul.menu li
+{
+  border-bottom: 1px dashed grey;
+}
