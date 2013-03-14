@@ -3,7 +3,7 @@
 body
 {
   background-color:#E5ECDD;
-  background-image: url('http://localhost/sncc/sites/all/themes/sncc_theme/sncc_image/bg.png');
+  background-image: url('../sncc_image/bg.png');
 }
 
 header{
@@ -27,7 +27,7 @@ ul.menu li.leaf : first-child
 {
 	font-weight: bold;
 }
-ul.menu li.leaf:nth-child(2) a {
+.block-menu-menu-menu-sncc-footer ul.menu li.leaf:nth-child(2) a {
 font-weight: bold;
 }
 
@@ -37,6 +37,7 @@ font-weight: bold;
 }
 .block-menu-menu-sncc-footer ul.menu li a{
 	color: #0000aa;
+  font-family: Helvetica;
 }
 
 .footer
@@ -44,19 +45,21 @@ font-weight: bold;
 	border-top: 1px solid black;
 	padding-left: 30px;
 	padding-top: 15px;
+  font-size:10px;
+  font-family:Helvetica;
+  color:#000;
 	padding-bottom: 5px;
   margin-top: -5px;
   background-color: #fff;
 }
 .header {
-
-	background-color: #A1B980;
-	color: #ffffff;
-	padding-left: 13px;
-	line-height: 40px;
-	padding-top: 0px;
-	font-size: 13px;
-	width: 375px;
+background-color: #A1B980;
+color: #ffffff;
+padding-left: 10px;
+line-height: 40px;
+padding-top: 0px;
+font-size: 10px;
+width: 300px;
 }
 .site-slogan {
 color: #7CA7D2;
@@ -72,6 +75,8 @@ height: 110px;
 h2.pane-title {
 color: #004A8D;
 border-bottom: 1px dashed grey;
+font-family:Helvetica;
+font-size:18px;
 }
 #region-menu
 {
@@ -92,10 +97,17 @@ border-bottom: 1px dashed grey;
 #zone-menu .nice-menu li
 {
   float: left;
+  height: 15px;
+  line-height: 8px;
+  margin-top: 7px;
+  margin-bottom: 5px;
   text-align: center;
   padding-left:15px;
-
+  border-top: none;
+  border-bottom: none;
   background:#004A8D;
+  border: none;
+  border-right: 2px solid #7CA8D2;
 }
 ul.menu li a{
    text-decoration:none;
@@ -160,6 +172,12 @@ ul.nice-menu ul
 	padding-left: 138px;
  	color:#7CA7D2;
 }
+div.pane-content ul.menu li a
+{
+ font-size:10px;
+ font-family:Helvetica;
+ color:#7CA7D2;
+}
 div.pane-content ul.menu li
 {
 	list-style: none !important;
@@ -178,19 +196,15 @@ a img.media-image
 }
 .footer_copyright
 {
-	color:blue;
-  font-size:13px;
+	color:#004A8D;
+  font-size:10px;
+  font-family:Helvetica;
   margin-top: -6px;
   padding-top: 17px;
   padding-left: 10px;
   padding-bottom: 15px;
   background-color: #fff;
 }
-/*.views-view-grid.cols-2
-{
-	border-right: 1px solid ;
-}*/
-
 .banner-front-image p {
 	margin: 0px;
 }
@@ -198,6 +212,7 @@ a img.media-image
 {
 	background: #7CA7D2;
 	padding: 5px;
+  font-family:Helvetica;
 }
 #mini-panel-top_sncc .grid-12 {
   width: 570px;
@@ -223,7 +238,12 @@ a img.media-image
 {
   width:210px;
   float:left;
+  height:250px;
    margin:0px;
+   background:#fff;
+   /*border-left:1px solid grey;*/
+   padding-left: 8px;
+   line-height: 32px;
 }
 .front-view
 {
@@ -374,19 +394,19 @@ padding-bottom: 50px;
 
 .panel-pane.pane-block.pane-menu-menu-patient-resources {
   padding-left: 40px;
-  padding-top: 18px;
+  padding-top: 23px;
   text-transform: uppercase;
 }
 
 .panel-pane.pane-block.pane-menu-menu-services.node-sidebar {
   padding-left: 40px;
-  padding-top: 18px;
+  padding-top: 23px;
   text-transform: uppercase;
 }
 .inside.panels-flexible-region-inside.panels-flexible-region-32-r1__-inside.panels-flexible-region-inside-first
 {
   padding-left: 40px;
-  padding-top: 18px;
+  padding-top: 23px;
   text-transform: uppercase;
 }
 .panels-flexible-region.panels-flexible-region-32-r1.panels-flexible-region-last
@@ -423,4 +443,168 @@ div.pane-menu-menu-services ul.menu li.first li
 .pane-menu-menu-your-team-sidebar-menu ul.menu li
 {
   border-bottom: 1px dashed grey;
+}
+div.pane-front-page-view-block h2.pane-title {
+color: #004A8D;
+padding-top: 17px;
+border-bottom: none;
+padding-left: 16px;
+}
+.shift
+{
+  height:82px;
+  background:#fff;
+  font-size:12px;
+  font-family:Helvetica;
+  color:#004A8D;
+  font-weight:bold;
+  /*border-left:1px solid grey;*/
+  border-bottom: 1px dashed grey;
+}
+.shift img {
+padding-top: 12px;
+padding-left: 2px;
+height:46px;
+width:46px;
+}
+.views-view-grid.cols-2
+{
+  border: none;
+}
+.row-1.row-first
+{
+  border: none;
+}
+.edit p.shift:nth-child(3)
+{
+  border:none;
+}
+.view-content {
+border-right: 1px solid #ccc;
+margin-right: -14px;
+
+}
+tr.row-1.row-first td.col-1{
+  border-bottom:1px dashed #ccc;
+}
+tr.row-1.row-first td.col-2{
+  border-bottom:1px dashed #ccc;
+}
+.views-view-grid.cols-2 {
+border: none;
+}
+#mini-panel-top_sncc {
+padding-left: 10px;
+}
+.tabs.primary.clearfix {
+display: none;
+}
+
+#zone-menu .nice-menu li:nth-child(5)
+{
+  border-right:none;
+}
+h1.title {
+color: #004A8D;
+padding-left: 244px;
+background: #fff;
+font-family: Helvetica;
+padding-top: 25px;
+margin-left: -10px;
+margin-right: -2px;
+text-transform:uppercase;
+}
+h2.block-title {
+font-size: 21px;
+margin: 0;
+background: #fff;
+margin-top: -6px;
+margin-left: -10px;
+margin-right: -2px;
+color: #004A8D;
+font-family: Helvetica;
+padding-left: 15px;
+}
+
+#block-menu-menu-patient-resources div.block-inner div.content ul.menu li.leaf
+{
+  list-style:none !important ;
+  text-transform:uppercase;
+
+}
+
+#block-menu-menu-patient-resources div.block-inner div.content ul.menu li.expanded
+{
+  list-style:none !important ;
+  text-transform:uppercase;
+
+  }
+#block-menu-menu-patient-resources div.block-inner div.content ul.menu li.leaf a
+{
+  color:#7CA7D2;
+  font-family:Helvetica;
+  font-size:10px;
+  font-weight:none;
+}
+#block-menu-menu-patient-resources div.block-inner div.content ul.menu li.expanded a
+{
+  color:#7CA7D2;
+  font-family:Helvetica;
+  font-size:10px;
+  font-weight:none;
+}
+div.pane-news-and-archive h2.pane-title {
+color: #004A8D;
+font-family: Helvetica;
+font-size: 31px;
+padding-top: 38px;
+background: #fff;
+margin-right:-14px;
+padding-right:-14px;
+border: none;
+}
+
+div.pane-menu-menu-patient-resources h2.pane-title {
+  color: #004A8D;
+background: #fff;
+margin-top: -23px;
+margin-right: -22px;
+padding-top: 57px;
+padding-left: 15px;
+border: none;
+margin-left:-40px;
+}
+.view.view-news-and-archive.view-id-news_and_archive.view-display-id-page {
+background: #fff;
+margin-right: -14px;
+margin-top: -6px;
+border: none;
+margin-bottom: 0px;
+}
+div.pane-menu-menu-patient-resources div.pane-content {
+background: #fff;
+margin-top: -6px;
+margin-left: -40px;
+margin-right: -21px;
+height: 526px;
+}
+.view.view-news-and-archive.view-id-news_and_archive.view-display-id-page div.view-content td.col-1.col-first a{
+margin-left: 141px;
+float: left;
+margin-right: -600px;
+color:#004A8D;
+text-decoration:none;
+font-weight:bold;
+}
+
+
+div.view-id-news_and_archive tr.row-1.row-first td.col-1
+{
+  border-bottom: 1px dashed #ccc;
+}
+table {
+  border: none;
+}
+table.views-view-grid.cols-1 td{
+ border-bottom: 1px dashed #ccc;
 }
