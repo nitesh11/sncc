@@ -94,8 +94,10 @@ font-size:18px;
 }
 #region-menu
 {
-background: #0000aa;
 color:white;
+margin-left: 0px;
+margin-right: 0px;
+background-color: #004A8D;
 }
 /*
 #zone-menu .nice-menu {
@@ -641,11 +643,17 @@ border-right: 1px solid white;
 
 */
 
-
+#zone-menu {
+margin: 0px !important;
+width: 100%;
+}
 #block-system-main-menu {
-background-color: #004A8D;
-width: 1286px;
+/*width: 1286px;*/
 margin-left: -173px;
+}
+#zone-menu .grid-24 {
+padding-right: 0px;
+padding-left: 170px;
 }
 #block-system-main-menu div.block-inner ul.menu {
 padding-left: 153px;
